@@ -10,8 +10,6 @@ interface StatsCardProps {
   iconColor: string;
   valueColor?: string;
   onClick?: () => void;
-
-  // Add this line to support onClick
 }
 
 const StatsCard = ({

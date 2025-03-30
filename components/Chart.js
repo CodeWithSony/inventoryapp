@@ -10,7 +10,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register necessary components for Chart.js
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -34,7 +33,7 @@ const ProductList = () => {
         return response.json();
       })
       .then((data) => {
-        setProducts(data); // Assuming the API returns an array of products
+        setProducts(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -56,13 +55,12 @@ const ProductList = () => {
     return <div>Error: {error}</div>;
   }
 
-  // Prepare data for the chart
   const chartData = {
-    labels: products.map((product) => product.name), // Product names as labels
+    labels: products.map((product) => product.name),
     datasets: [
       {
         label: "Selling Price ($)",
-        data: products.map((product) => product.sellingPrice), // Selling prices as data points
+        data: products.map((product) => product.sellingPrice),
         backgroundColor: "rgba(75, 192, 192, 0.6)",
       },
     ],
@@ -85,7 +83,6 @@ const ProductList = () => {
     <div className="w-full ">
       <h1>Product List</h1>
 
-      {/* Render the Bar Chart */}
       <div style={{ marginTop: "40px" }} className="w-[70%] h-450px]">
         <Bar data={chartData} options={chartOptions} />
       </div>

@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "@/lib/db";
-import User from "@/models/User"; // Ensure you have this model
+import User from "@/models/User";
 
 export default async function handler(
   req: NextApiRequest,

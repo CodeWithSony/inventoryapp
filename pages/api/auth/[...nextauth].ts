@@ -29,7 +29,7 @@ export default NextAuth({
             throw new Error("Email and password are required");
           }
 
-          await dbConnect(); // Ensure DB connection
+          await dbConnect();
 
           const user = await User.findOne({ email: credentials.email });
 
@@ -49,7 +49,6 @@ export default NextAuth({
           console.log("✅ Authentication successful for:", user.email);
           return user;
         } catch (error: any) {
-
           console.error("❌ Authentication error:", error.message);
           throw new Error(
             "Authentication failed. Please check your credentials."
@@ -61,7 +60,7 @@ export default NextAuth({
   pages: {
     signIn: "/auth",
   },
-  debug: true, // Enable debug logs
+  debug: true,
   session: {
     strategy: "jwt",
   },
@@ -70,5 +69,3 @@ export default NextAuth({
   },
   secret: process.env.NEXTAUTH_SECRET,
 });
-
-

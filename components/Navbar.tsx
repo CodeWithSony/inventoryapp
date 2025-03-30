@@ -1,5 +1,3 @@
-// components/Navbar.js
-
 import { useRouter } from "next/router";
 
 const Navbar = () => {

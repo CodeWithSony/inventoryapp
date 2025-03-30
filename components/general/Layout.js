@@ -4,7 +4,12 @@ import { useRouter } from "next/router";
 import { signOut } from "next-auth/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
-import { BellIcon, ChartBarIcon, CogIcon } from "@heroicons/react/24/outline";
+import {
+  BellIcon,
+  ChartBarIcon,
+  CogIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 const user = {
   name: "Whitney Francis",
@@ -35,12 +40,9 @@ const userNavigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-import { useSession } from "next-auth/react";
 
 export default function Layout({ children }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const { data: session, status } = useSession();
 
   const router = useRouter();
   const [tabs, SetTabss] = useState([

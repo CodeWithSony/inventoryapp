@@ -10,17 +10,13 @@ export default async function handler(
 
   if (req.method === "GET") {
     try {
-      // Get the search term from query parameters
       const { search } = req.query;
 
-      // Build the query object for MongoDB
       const query: any = {};
       if (search) {
-        // Use a regex for case-insensitive search
-        query.name = { $regex: new RegExp(search as string, "i") }; // 'i' for case-insensitive
+        query.name = { $regex: new RegExp(search as string, "i") };
       }
 
-      // Fetch products based on the query
       const products = await Product.find(query);
       return res.status(200).json(products);
     } catch (error) {

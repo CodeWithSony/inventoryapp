@@ -1,26 +1,13 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../../components/general/Layout";
 import { useRouter } from "next/router";
-import { UserIcon } from "@heroicons/react/24/outline";
-import { useSession } from "next-auth/react";
 
-import {
-  BookOpenIcon,
-  CalendarIcon,
-  IdentificationIcon,
-} from "@heroicons/react/24/outline";
+import { CalendarIcon } from "@heroicons/react/24/outline";
 import dynamic from "next/dynamic";
-import Dashboard from "../../components/dash/Dashboard";
-// import tokenRefresh from "../../lib/tokenRefresh";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Tab() {
   const [currentPage, setCurrentPage] = useState();
   const router = useRouter();
-  const { data: session } = useSession();
 
   const [pillTabs, setPillTabs] = useState([
     {

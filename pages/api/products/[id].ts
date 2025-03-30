@@ -1,8 +1,3 @@
-// pages/api/products/[id].js
-// import dbConnect from "../../../utils/dbConnect";
-
-// import Product from "../../../models/Product";
-// import dbConnect from "../../../lib/dbConnect";
 import dbConnect from "@/lib/db";
 import { Product } from "@/models/Product";
 
@@ -23,7 +18,7 @@ export default async function handler(req: any, res: any) {
         }
         return res.status(200).json(product);
       } catch (error) {
-        return res.status(500).json({ error: error.message });
+        console.log(error, "error");
       }
 
     default:
