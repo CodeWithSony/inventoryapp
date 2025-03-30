@@ -7,7 +7,6 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
       const { search } = req.query;
-
       const query = {};
       if (search) {
         query.name = { $regex: new RegExp(search, "i") };
@@ -16,6 +15,7 @@ export default async function handler(req, res) {
       const products = await Product.find(query);
       return res.status(200).json(products);
     } catch (error) {
+      console.error("Error fetching products:", error); // Log the error
       return res.status(500).json({ error: "Failed to fetch products." });
     }
   } else if (req.method === "POST") {
@@ -52,6 +52,7 @@ export default async function handler(req, res) {
       await newProduct.save();
       return res.status(201).json(newProduct);
     } catch (error) {
+      console.error("Error creating product:", error); // Log the error
       return res.status(500).json({ error: "Failed to create the product" });
     }
   } else if (req.method === "DELETE") {
@@ -70,6 +71,7 @@ export default async function handler(req, res) {
 
       return res.status(200).json({ message: "Product deleted successfully" });
     } catch (error) {
+      console.error("Error deleting product:", error); // Log the error
       return res.status(500).json({ error: "Failed to delete the Product" });
     }
   }
