@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "next.config.js"
-, "components/general/Layout.js"  ],
+, "components/general/Layout.js", "lib/db.js", "components/Navbar.jsx", "components/Input.jsx", "components/general/StatsCard.jsx", "components/dash/DeleteProduct.jsx", "components/dash/Dashboard.js", "pages/api/auth/[...nextauth].js", "models/User.js", "models/Product.js", "pages/api/products.js", "pages/api/products/[id].js"  ],
   "exclude": [
     "node_modules"
   ]
