@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
-import { signOut, signIn } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 
 import {
@@ -80,10 +80,10 @@ export default function Layout({ children }) {
     }
   }, [router.pathname]);
 
-  const handleSignOut = () => {
-    const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
-    signOut({ callbackUrl: baseurl + "/login" });
-  };
+  // const handleSignOut = () => {
+  //   const baseurl = process.env.NEXT_PUBLIC_BASE_URL;
+  //   signOut({ callbackUrl: baseurl + "/login" });
+  // };
 
   const handleSignIn = () => {
     router.push("/auth");
