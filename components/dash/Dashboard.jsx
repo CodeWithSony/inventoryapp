@@ -21,7 +21,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("/api/products");
+        const res = await fetch(`/api/products`);
         const products = await res.json();
 
         setTotalProducts(products.length);

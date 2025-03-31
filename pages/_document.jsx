@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title> Inventory App</title>
+        {/* <title> Inventory App</title> */}
         <link rel="icon" href="/images/cl.png" />
         <script async src="https://pay.google.com/gp/p/js/pay.js"></script>
       </Head>
