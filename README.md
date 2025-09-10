@@ -19,7 +19,7 @@ https://inventoryapp-gxh3.vercel.app/
 ## 👩‍💻 Author
 
 **Priyanka Sahu**  
-- GitHub: [@codewithsony](https://github.com/your-github-username)
+- GitHub: [(https://github.com/your-github-username)
     
 - LinkedIn: [Priyankasahu(https://linkedin.com/in/your-linkedin)
   
@@ -33,5 +33,6 @@ git clone https://github.com/codewithsony/inventory-app.git
 cd inventory-app
 npm install
 npm run dev
+
 
 
