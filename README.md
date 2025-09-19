@@ -20,6 +20,12 @@ A full-stack web app to manage products, track sales, and monitor profits with r
 ![Operation](./screenshot/operation.png)  
 
 
+## Api Routes
+https://inventoryapp-gxh3.vercel.app/ : home page
+https://inventoryapp-gxh3.vercel.app/admin/products : product page
+https://inventoryapp-gxh3.vercel.app/admin/dashboard : dashboard page
+https://inventoryapp-gxh3.vercel.app/auth : login register page
+
 ## 🚀 Features
 - Add, update, and delete products
 - Secure login/signup with JWT authentication
@@ -57,6 +63,7 @@ git clone https://github.com/codewithsony/inventory-app.git
 cd inventory-app
 npm install
 npm run dev
+
 
 
 
