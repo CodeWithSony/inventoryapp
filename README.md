@@ -2,6 +2,24 @@
 
 A full-stack web app to manage products, track sales, and monitor profits with real-time analytics.
 
+## Screenshots
+
+### 1. Login Page  
+![Login Page](./screenshot/login.png)  
+
+### 2. Register Page  
+![Register Page](./screenshot/register.png)  
+
+### 3. Dashboard
+![Dashboard](./screenshot/dashboard.png)  
+
+### 4. Inventory Home Page  
+![Inventory Home Page](./screenshot/inventoryHomePage.png)  
+
+### 5. Operation 
+![Operation](./screenshot/operation.png)  
+
+
 ## 🚀 Features
 - Add, update, and delete products
 - Secure login/signup with JWT authentication
@@ -33,6 +51,7 @@ git clone https://github.com/codewithsony/inventory-app.git
 cd inventory-app
 npm install
 npm run dev
+
 
 
 
