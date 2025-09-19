@@ -34,6 +34,12 @@ A full-stack web app to manage products, track sales, and monitor profits with r
 ## Live demo
 https://inventoryapp-gxh3.vercel.app/
 
+## Api Routes
+http://localhost:3000/
+http://localhost:3000/admin/products
+http://localhost:3000/admin/dashboard
+http://localhost:3000/auth   
+
 ## 👩‍💻 Author
 
 **Priyanka Sahu**  
@@ -51,6 +57,7 @@ git clone https://github.com/codewithsony/inventory-app.git
 cd inventory-app
 npm install
 npm run dev
+
 
 
 
